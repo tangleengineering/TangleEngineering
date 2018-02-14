@@ -50,19 +50,18 @@ hrefTargetBlank = true
 
 
 # This theme supports multiple languages
-#[languages.nn]
-#languageName = "Nynorsk"
-#weight = 1
-#title = "DocuAPI-døme"
+[languages.nn]
+languageName = "Nynorsk"
+weight = 1
+title = "Tangle Engineering"
 
 # Left sidebar footer items. Use HTMl or Markdown.
-#toc_footers = [ 
-#"<a href='#'>Registrer deg for ein utviklarnøkkel</a>",
-#"Dokumentasjonen er driven av [DocuAPI](https://github.com/bep/docuapi)",
-#"Hugo Theme av [bep](https://github.com/bep)"
-#]
+toc_footers = [ 
+"Dokumentasjonen er driven av [DocuAPI](https://github.com/bep/docuapi)",
+"Hugo Theme av [bep](https://github.com/bep)"
+]
 
-#[languages.nn.blackfriday]
+[languages.nn.blackfriday]
 # Norwegian uses angled quotes
-#angledQuotes = true
-#hrefTargetBlank = true
+angledQuotes = true
+hrefTargetBlank = true
