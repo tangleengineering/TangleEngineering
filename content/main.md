@@ -20,7 +20,7 @@ curl http://localhost:14265 \
   -X POST \
   -H 'Content-Type: application/json' \
   -H 'X-IOTA-API-Version: 1' \
-  -d '{"command": "getNodeInfo"}'```
+  -d '{"command": "getNodeInfo"}'
 
 ```
 
