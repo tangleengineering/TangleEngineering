@@ -3,14 +3,14 @@ weight: 10
 title: IRI API Reference
 ---
 
-# Introduction
+# JSON API 
 
 This page is a reference to the IRI JSON API. There is some official
 documentation out there but due to the ever-changing nature of IRI and it's API
 I decided to make a community-editable documentation repo.
 
 
-# Connecting 
+## Node Info 
 
 ```shell
 curl http://localhost:14265 \
@@ -64,6 +64,9 @@ node](https://iota.dance/nodes).
 
 ### Response
 
+Considering changing the `value` column below to be a description of the
+returned value instead of an example. 
+
 Field Name | Value
 -----------|-------
 appName|IRI
@@ -73,9 +76,9 @@ jreFreeMemory|466437760
 jreVersion|1.8.0_162
 jreMaxMemory|7874281472
 jreTotalMemory|3077570560
-latestMilestone| <milestone hash>
+latestMilestone|9CVOPWUEEA9OGDP9BUJOUWYLFWYQORDYZEFLPVH9RDOBHZYTVHBWIYHYIOYGLVKKCMHKE9HTXGIEA9999
 latestMilestoneIndex|350201
-latestSolidSubtangleMilestone| <milestone hash>
+latestSolidSubtangleMilestone|9CVOPWUEEA9OGDP9BUJOUWYLFWYQORDYZEFLPVH9RDOBHZYTVHBWIYHYIOYGLVKKCMHKE9HTXGIEA9999
 latestSolidSubtangleMilestoneIndex|350201
 neighbors|11
 packetsQueueSize|0
