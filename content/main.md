@@ -73,9 +73,9 @@ jreFreeMemory|466437760
 jreVersion|1.8.0_162
 jreMaxMemory|7874281472
 jreTotalMemory|3077570560
-latestMilestone|9CVOPWUEEA9OGDP9BUJOUWYLFWYQORDYZEFLPVH9RDOBHZYTVHBWIYHYIOYGLVKKCMHKE9HTXGIEA9999
+latestMilestone| <milestone hash>
 latestMilestoneIndex|350201
-latestSolidSubtangleMilestone|9CVOPWUEEA9OGDP9BUJOUWYLFWYQORDYZEFLPVH9RDOBHZYTVHBWIYHYIOYGLVKKCMHKE9HTXGIEA9999
+latestSolidSubtangleMilestone| <milestone hash>
 latestSolidSubtangleMilestoneIndex|350201
 neighbors|11
 packetsQueueSize|0
