@@ -82,7 +82,9 @@ Kittn expects for the API key to be included in all API requests to the server i
    "tips":5454,
    "transactionsToRequest":50,
    "duration":0
-}```
+}
+```
+
 <aside class="notice">
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
