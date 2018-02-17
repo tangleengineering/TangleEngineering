@@ -1,58 +1,61 @@
 ---
 weight: 10
-title: API Reference
+title: IRI API Reference
 ---
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+This page is a reference to the IRI JSON API. There is some official
+documentation out there but due to the ever-changing nature of IRI and it's API
+I decided to make a community-editable documentation repo.
 
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
-**This example API documentation page was created with [DocuAPI](https://github.com/bep/docuapi/), a multilingual documentation theme for the static site generator [Hugo](http://gohugo.io/).** 
+# Connecting 
 
-# Authentication
-
-> To authorize, use this code:
+> To connect to the API and get node info use this code:
 
 ```go
 package main
 
-import "github.com/bep/kittn/auth"
+import (
+    "github.com/iotaledger/giota"
+    "fmt"
+)
 
 func main() {
-	api := auth.Authorize("meowmeowmeow")
-
-	// Just to make it compile
-	_ = api
+    api := giota.NewAPI("http://localhost:14265",nil)
+    nodeInfo, err := api.GetNodeInfo()
+    if err != nil {
+        panic(err)
+    }
+    fmt.Printf("%#v\n",nodeInfo)
 }
 ```
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
-
 ```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
+// Someone please contribute
 ```
 
 ```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
+curl http://localhost:14265 \
+  -X POST \
+  -H 'Content-Type: application/json' \
+  -H 'X-IOTA-API-Version: 1' \
+  -d '{"command": "getNodeInfo"}'```
+
+{"appName":"IRI","appVersion":"1.4.2.1","jreAvailableProcessors":4,"jreFreeMemory":466437760,"jreVersion":"1.8.0_162","jreMaxMemory":7874281472,"jreTotalMemory":3077570560,"latestMilestone":"9CVOPWUEEA9OGDP9BUJOUWYLFWYQORDYZEFLPVH9RDOBHZYTVHBWIYHYIOYGLVKKCMHKE9HTXGIEA9999","latestMilestoneIndex":350201,"latestSolidSubtangleMilestone":"9CVOPWUEEA9OGDP9BUJOUWYLFWYQORDYZEFLPVH9RDOBHZYTVHBWIYHYIOYGLVKKCMHKE9HTXGIEA9999","latestSolidSubtangleMilestoneIndex":350201,"neighbors":11,"packetsQueueSize":0,"time":1518634288522,"tips":5454,"transactionsToRequest":50,"duration":0}
 ```
 
 ```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
+// Someone please contribute
 ```
 
-> Make sure to replace `meowmeowmeow` with your API key.
+```java
+// Someone please contribute
+```
+
+> Make sure to replace `http://localhost:14265` with the hostname and port of
+> an IRI node if you are not running one yourself.
 
 Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
 
