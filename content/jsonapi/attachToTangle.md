@@ -5,9 +5,10 @@ title: attachToTangle
 
 ## Attach To Tangle
 
-This endpoint returns information about the IRI node you have connected to,
-including software name and version as well as what the latest milestones it has
-seen are.
+This endpoint does the Proof of Work (PoW) required to attach a transaction to
+the tangle. It's important to note that this doesn't actually do the attaching;
+you must call `broadcastTransactions` to do that, but without doing the PoW
+first your transaction will be deemed invalid by the network.
 
 
 ```shell
@@ -15,7 +16,7 @@ curl http://localhost:14265 \
   -X POST \
   -H 'Content-Type: application/json' \
   -H 'X-IOTA-API-Version: 1' \
-  -d '{"command": "getNodeInfo"}'
+  -d '{"command": "attachToTangle", "trunkTransaction": "JVMTDGDPDFYHMZPMWEKKANBQSLSDTIIHAYQUMZOKHXXXGJHJDQPOMDOMNRDKYCZRUFZROZDADTHZC9999", "branchTransaction": "P9KFSJVGSPLXAEBJSHWFZLGP9GGJTIO9YITDEHATDTGAFLPLBZ9FOFWWTKMAZXZHFGQHUOXLXUALY9999", "minWeightMagnitude": 18, "trytes": ["TRYTVALUEHERE"]}'
 
 ```
 
@@ -29,11 +30,22 @@ import (
 
 func main() {
     api := giota.NewAPI("http://localhost:14265",nil)
-    nodeInfo, err := api.GetNodeInfo()
+
+    // Still more to do here, ugh...
+
+    request := giota.AttachToTangleRequest{
+        TrunkTransaction: "JVMTDGDPDFYHMZPMWEKKANBQSLSDTIIHAYQUMZOKHXXXGJHJDQPOMDOMNRDKYCZRUFZROZDADTHZC9999",
+        BranchTransaction: "P9KFSJVGSPLXAEBJSHWFZLGP9GGJTIO9YITDEHATDTGAFLPLBZ9FOFWWTKMAZXZHFGQHUOXLXUALY9999",
+        MinWeightMagnitude: 14,
+        Trytes: []giota.Transaction{
+            transaction,
+        },
+    }
+    response, err := api.AttachToTangle(&request)
     if err != nil {
         panic(err)
     }
-    fmt.Printf("%#v\n",nodeInfo)
+    fmt.Printf("%#v\n",response)
 }
 ```
 
