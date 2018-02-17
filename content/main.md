@@ -9,8 +9,20 @@ This page is a reference to the IRI JSON API. There is some official
 documentation out there but due to the ever-changing nature of IRI and it's API
 I decided to make a community-editable documentation repo.
 
+By default IRI listens on port `14265` for connections to its HTTP JSON API. 
+
+<aside class="notice">
+Most users are not running an IRI node locally, so you should replace
+<code>http://localhost:14265</code> with that of your own node or a [public
+node](https://iota.dance/nodes).
+</aside>
 
 ## Node Info 
+
+This endpoint returns information about the IRI node you have connected to,
+including software name and version as well as what the latest milestones it has
+seen are.
+
 
 ```shell
 curl http://localhost:14265 \
@@ -54,13 +66,6 @@ func main() {
 > Make sure to replace `http://localhost:14265` with the hostname and port of
 > an IRI node if you are not running one yourself.
 
-By default IRI listens on port `14265` for connections to its HTTP JSON API. 
-
-<aside class="notice">
-Most users are not running an IRI node locally, so you should replace
-<code>http://localhost:14265</code> with that of your own node or a [public
-node](https://iota.dance/nodes).
-</aside>
 
 ### Response
 
