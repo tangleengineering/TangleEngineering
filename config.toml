@@ -19,6 +19,9 @@ search = true
   
 # Configure the language example tabs.
 [[params.language_tabs]]
+key = "shell"
+name = "Shell"
+[[params.language_tabs]]
 key = "go"
 name = "Go" 
 [[params.language_tabs]]
