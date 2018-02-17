@@ -23,6 +23,29 @@ curl http://localhost:14265 \
   -d '{"command": "getNodeInfo"}'```
 
 ```
+> The above command returns a JSON like this:
+
+```json
+{
+   "appName":"IRI",
+   "appVersion":"1.4.2.1",
+   "jreAvailableProcessors":4,
+   "jreFreeMemory":466437760,
+   "jreVersion":"1.8.0_162",
+   "jreMaxMemory":7874281472,
+   "jreTotalMemory":3077570560,
+   "latestMilestone":"9CVOPWUEEA9OGDP9BUJOUWYLFWYQORDYZEFLPVH9RDOBHZYTVHBWIYHYIOYGLVKKCMHKE9HTXGIEA9999",
+   "latestMilestoneIndex":350201,
+   "latestSolidSubtangleMilestone":"9CVOPWUEEA9OGDP9BUJOUWYLFWYQORDYZEFLPVH9RDOBHZYTVHBWIYHYIOYGLVKKCMHKE9HTXGIEA9999",
+   "latestSolidSubtangleMilestoneIndex":350201,
+   "neighbors":11,
+   "packetsQueueSize":0,
+   "time":1518634288522,
+   "tips":5454,
+   "transactionsToRequest":50,
+   "duration":0
+}
+```
 
 ```go
 package main
