@@ -86,27 +86,6 @@ Kittn uses API keys to allow access to the API. You can register a new Kittn API
 Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
 `Authorization: meowmeowmeow`
-```json
-{
-   "appName":"IRI",
-   "appVersion":"1.4.2.1",
-   "jreAvailableProcessors":4,
-   "jreFreeMemory":466437760,
-   "jreVersion":"1.8.0_162",
-   "jreMaxMemory":7874281472,
-   "jreTotalMemory":3077570560,
-   "latestMilestone":"9CVOPWUEEA9OGDP9BUJOUWYLFWYQORDYZEFLPVH9RDOBHZYTVHBWIYHYIOYGLVKKCMHKE9HTXGIEA9999",
-   "latestMilestoneIndex":350201,
-   "latestSolidSubtangleMilestone":"9CVOPWUEEA9OGDP9BUJOUWYLFWYQORDYZEFLPVH9RDOBHZYTVHBWIYHYIOYGLVKKCMHKE9HTXGIEA9999",
-   "latestSolidSubtangleMilestoneIndex":350201,
-   "neighbors":11,
-   "packetsQueueSize":0,
-   "time":1518634288522,
-   "tips":5454,
-   "transactionsToRequest":50,
-   "duration":0
-}
-```
 
 <aside class="notice">
 You must replace <code>meowmeowmeow</code> with your personal API key.
