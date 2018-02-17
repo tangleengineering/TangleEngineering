@@ -1,5 +1,5 @@
 ---
-weight: 100
+weight: 1
 title: IRI API Reference
 ---
 
