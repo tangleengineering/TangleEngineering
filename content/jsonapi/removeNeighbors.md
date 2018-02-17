@@ -1,9 +1,9 @@
 ---
 weight: 10
-title: IRI API Reference
+title: removeNeighbors
 ---
 
-## Node Info 
+## Remove Neighbors 
 
 This endpoint returns information about the IRI node you have connected to,
 including software name and version as well as what the latest milestones it has
